@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Booking Confirm</title>
+	<script src="https://kit.fontawesome.com/d65e1ae71b.js" crossorigin="anonymous"></script>
+	<style>
+		@import url("styleSheet/payment.css")
+	</style>
+	<script>
+    function confirmSubmission() {
+        alert("Your booking has been submitted successfully!");
+    }
+</script>
+</head>
+<body>
+<header>
+	<h1>Order the Trip</h1>
+</header>
+
+<section>
+	<h2>Confirm Booking</h2>
+	<h3>Historical Wonders</h3>
+	<h3>100$</h3>
+	<form onsubmit="confirmSubmission()">
+	<label for="first-name">First Name</label>
+	<input class="input-box" type="text" id="first-name" name="first_name" placeholder="Enter your first name" required>
+
+	<label for="last-name">Last Name</label>
+	<input class="input-box" type="text" id="last-name" name="last_name" placeholder="Enter your last name" required>
+
+	<label for="email">Email</label>
+	<input class="input-box" type="email" id="email" name="email" placeholder="example@example.com" required>
+
+	<label for="phone">Phone Number</label>
+	<input class="input-box" type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="1234567890" title="Enter a valid 10-digit phone number" required>
+
+	<label for="card">Credit Card</label>
+	<input class="input-box" type="text" id="card" name="card" pattern="[0-9]{16}" placeholder="0000 0000 0000 0000" title="Enter a 16-digit credit card number" required>
+
+	<label for="cvv">CVV</label>
+	<input class="input-box" type="text" id="cvv" name="cvv" pattern="[0-9]{3}" placeholder="123" title="Enter a 3-digit CVV" required>
+
+	<label for="expiration">Expiration Date</label>
+	<input class="input-box" type="text" id="exp" name="exp" pattern="[0-9]{4}" placeholder="00 / 00" required>
+
+	<input class="input-box" type="submit" value="Book the Trip">
+	</form>
+</section>
+<footer>
+	This website is created by Shuhao Liu. |
+	<a href="about.html">About</a>
+</footer>
+</body>
+</html>

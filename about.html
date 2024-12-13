@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Traveling - About</title>
+	<script src="https://kit.fontawesome.com/d65e1ae71b.js" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<style>
+		@import url("styleSheet/about.css");
+		.chart-container {
+			width: 80%;
+			margin: 20px auto;
+		}
+	</style>
+</head>
+<body>
+<header>
+	<h1>Traveling in Wuhan</h1>
+</header>
+<nav>
+	<a href="index.html">Home</a>
+	<a href="attractions.html"><i class="fa-solid fa-mountain-sun"></i>Attractions</a>
+	<a href="book.html"><b>Book a trip</b></a>
+	<a href="food.html">Delicacies<i class="fa-solid fa-plate-wheat"></i></a>
+	<a href="about.html">About</a>
+</nav>
+<section>
+<h2>Contact</h2>
+	<a href="mailto:support@support.support">support@support.support</a>
+</section>
+
+<section class="chart-container">
+	<h2>Monthly Business Data (2024)</h2>
+	<canvas id="businessChart"></canvas>
+</section>
+
+<footer>
+	This website is created by Shuhao Liu. |
+	<a href="about.html">About</a>
+</footer>
+
+<script>
+	const data = {
+		labels: [
+			'January', 'February', 'March', 'April', 'May', 'June', 
+			'July', 'August', 'September', 'October', 'November', 'December'
+		],
+		datasets: [{
+			label: 'Revenue (in USD)',
+			data: [1200, 1500, 1800, 2200, 2500, 3000, 3200, 3100, 2800, 2900, 2700, 3100],
+			backgroundColor: 'rgba(75, 192, 192, 0.5)',
+			borderColor: 'rgba(75, 192, 192, 1)',
+			borderWidth: 1
+		}]
+	};
+	const config = {
+		type: 'bar',
+		data: data,
+		options: {
+			responsive: true,
+			plugins: {
+				legend: {
+					position: 'top',
+				},
+				title: {
+					display: true,
+					text: 'Monthly Business Data (2024)'
+				}
+			},
+			scales: {
+				y: {
+					beginAtZero: true,
+					title: {
+						display: true,
+						text: 'Revenue (in USD)'
+					}
+				},
+				x: {
+					title: {
+						display: true,
+						text: 'Months'
+					}
+				}
+			}
+		}
+	};
+	const ctx = document.getElementById('businessChart').getContext('2d');
+	new Chart(ctx, config);
+</script>
+</body>
+</html>

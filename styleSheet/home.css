@@ -1,0 +1,16 @@
+@import url("global.css");
+
+.images {
+	display: flex;
+	height: 180px;
+	gap: 10px;
+	justify-content: center;
+}
+
+.images img {
+	border-radius: 5px;
+}
+
+.link {
+	background-color: #BBBBBB;
+}
